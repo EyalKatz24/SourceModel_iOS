@@ -73,10 +73,6 @@ open class TableDataSource: NSObject, UITableViewDataSource, TableDataSourcing, 
     /// modelCollection, a collection of models
     public internal(set) var modelCollection: ModelCollection?
     
-    /// :nodoc:
-    @available(*, unavailable)
-    public internal(set) var model: Model?
-    
     /**
      DataSource Cell Delegate
      
@@ -100,18 +96,6 @@ open class TableDataSource: NSObject, UITableViewDataSource, TableDataSourcing, 
         self.delegate = delegate
     }
     
-    /**
-     Initialise with a a single type object.
-     
-     - Parameters:
-        - modelCollection: ModelCollection
-     
-     - SeeAlso: `Model`
-     */
-    /// :nodoc:
-    @available(*, unavailable)
-    public init(model: Model) {}
-    
     // MARK: Public functions
     
     /**
@@ -126,10 +110,6 @@ open class TableDataSource: NSObject, UITableViewDataSource, TableDataSourcing, 
     open func update(modelCollection: ModelCollection?) {
         self.modelCollection = modelCollection
     }
-    
-        /// :nodoc:
-    @available(*, unavailable)
-    open func update(model: Model?) { }
 
     // MARK: UITableViewDataSource functions
     
